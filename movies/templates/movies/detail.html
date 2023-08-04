@@ -1,16 +1,41 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <style>
+        .movie-details {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
 
-    <dl>
-        <dt>Title</dt>
-        <dd>{{ movie.title }}</dd>
-        <br/>
-        <dt>Genre</dt>
-        <dd>{{ movie.genre }}</dd>
-        <br/>
-        <dt>Stock</dt>
-        <dd>{{ movie.number_in_stock }}</dd>
-    </dl>
+        .details-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
+        .detail-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .detail-value {
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <div class="movie-details">
+        <dl class="details-list">
+            <dt class="detail-label">Title</dt>
+            <dd class="detail-value">{{ movie.title }}</dd>
+
+            <dt class="detail-label">Genre</dt>
+            <dd class="detail-value">{{ movie.genre }}</dd>
+
+            <dt class="detail-label">Stock</dt>
+            <dd class="detail-value">{{ movie.number_in_stock }}</dd>
+        </dl>
+    </div>
 {% endblock %}
