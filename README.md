@@ -1,2 +1,2 @@
 # Vidly
-The paid course for Mosh Hamedani
+Simple project with generate API by Django tastypie
